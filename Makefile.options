@@ -26,8 +26,8 @@ PERSISTENT_DATA_BACKEND = sqlite
 DEBUG := no
 
 # User to run server with (make run.*)
-WWWUSER := www
-WWWGROUP := www
+WWWUSER := www-data
+WWWGROUP := www-data
 
 # Port for running the server (make run.*)
 PORT := 80
@@ -49,7 +49,7 @@ TEST_PREFIX := local/
 ETCDIR := etc/${PROJECT_NAME}
 # Project's library $(PROJECT_NAME).cma (cmxs)
 LIBDIR := lib/${PROJECT_NAME}
-# Command pipe, eg. $ echo restart > $(INSTALL_PREFIX)$(CMDPIPE)
+# Command pipe, eg. $ echo reload > $(INSTALL_PREFIX)$(CMDPIPE)
 CMDPIPE := var/run/${PROJECT_NAME}-cmd
 # Ocsigenserver's logging files
 LOGDIR := var/log/${PROJECT_NAME}
